@@ -110,72 +110,79 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 30.0,),
 
             Container(
-              padding: const EdgeInsets.only(left: 25.0, top: 5.0, right: 25.0, bottom: 5.0),
-              height: 50.0,
-              color: Colors.transparent,
-              child: Container(
-                decoration: BoxDecoration(
+              decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.indigoAccent,
-                    style: BorderStyle.solid,
-                    width: 1.5
+                      style: BorderStyle.solid,
+                      color: Colors.indigo,
+                      width: 1.5
                   ),
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.circular(20)
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (BuildContext Contex) => QuickDropPage())
-                    );
-                  },
-                  child: const Center(
-                    child: Text(
+                  borderRadius: BorderRadius.circular(20.0)
+              ),
+              child: Column(
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (BuildContext context) => QuickDropPage())
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0)
+                      ),
+                      backgroundColor: Colors.transparent,
+                      minimumSize: const Size(300.0, 30.0),
+                      elevation: 0,
+                    ),
+                    child: const Text(
                       'Quick Drop',
                       style: TextStyle(
                         fontFamily: 'Times New Roman',
                         fontSize: 18.0,
-                        color: Colors.indigo
+                        color: Colors.indigo,
                       ),
                     ),
                   ),
-                )
+                ],
               ),
             ),
             const SizedBox(height: 30.0,),
 
             Container(
-              padding: const EdgeInsets.only(left: 25.0, top: 5.0, right: 25.0, bottom: 5.0),
-              height: 50.0,
-              color: Colors.transparent,
-              child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          color: Colors.indigoAccent,
-                          style: BorderStyle.solid,
-                          width: 1.5
-                      ),
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(20)
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      style: BorderStyle.solid,
+                      color: Colors.indigo,
+                      width: 1.5
                   ),
-                  child: GestureDetector(
-                    onTap: () {
+                  borderRadius: BorderRadius.circular(20.0)
+              ),
+              child: Column(
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {
                       Navigator.of(context).push(
-                        MaterialPageRoute(builder: (BuildContext Context) => LogInPage(),
-                      ),
+                          MaterialPageRoute(builder: (BuildContext context) => LogInPage())
                       );
                     },
-                    child: const Center(
-                      child: Text(
-                        'Log In',
-                        style: TextStyle(
-                            fontFamily: 'Times New Roman',
-                            fontSize: 18.0,
-                          color: Colors.indigo
-                        ),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0)
+                      ),
+                      backgroundColor: Colors.transparent,
+                      minimumSize: const Size(300.0, 30.0),
+                      elevation: 0,
+                    ),
+                    child: const Text(
+                      'Log In',
+                      style: TextStyle(
+                        fontFamily: 'Times New Roman',
+                        fontSize: 18.0,
+                        color: Colors.indigo,
                       ),
                     ),
-                  )
+                  ),
+                ],
               ),
             ),
             

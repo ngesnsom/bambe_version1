@@ -76,6 +76,7 @@ class _LogInPageState extends State<LogInPage> {
                           fontWeight: FontWeight.normal,
                           color: Colors.indigoAccent,
                         ),
+                        border: InputBorder.none,
                       ),
                     )
                   ),
@@ -109,6 +110,7 @@ class _LogInPageState extends State<LogInPage> {
                             fontWeight: FontWeight.normal,
                             color: Colors.indigoAccent,
                           ),
+                          border: InputBorder.none,
                         ),
                       )
                   ),
@@ -142,6 +144,7 @@ class _LogInPageState extends State<LogInPage> {
                             fontWeight: FontWeight.normal,
                             color: Colors.indigoAccent,
                           ),
+                          border: InputBorder.none,
                         ),
                       )
                   ),
@@ -149,34 +152,39 @@ class _LogInPageState extends State<LogInPage> {
                 const SizedBox(height: 50.0,),
 
                 Container(
-                  padding: const EdgeInsets.only(left: 25.0, top: 5.0, right: 25.0, bottom: 5.0),
-                  height: 60.0,
-                  color: Colors.transparent,
-                  child: Container(
-                    decoration: BoxDecoration(
+                  decoration: BoxDecoration(
                       border: Border.all(
-                          width: 1.5,
                           style: BorderStyle.solid,
-                          color: Colors.white
+                          color: Colors.white,
+                          width: 1.5
                       ),
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: const Center(
-                        child: Text(
-                          'Log in',
+                      borderRadius: BorderRadius.circular(20.0)
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0)
+                          ),
+                          backgroundColor: Colors.transparent,
+                          minimumSize: const Size(300.0, 40.0),
+                          elevation: 0,
+                        ),
+                        child: const Text(
+                          'Log In',
                           style: TextStyle(
-                              fontFamily: 'Times New Roman',
-                              fontSize: 18.0,
-                              color: Colors.white
+                            fontFamily: 'Times New Roman',
+                            fontSize: 18.0,
+                            color: Colors.white,
                           ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
                 ),
+
                 const SizedBox(height: 30.0,),
 
                 const Center(

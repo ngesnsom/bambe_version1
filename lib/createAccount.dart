@@ -1,6 +1,7 @@
+import 'package:bambe/agent/agentRegistration.dart';
 import 'package:flutter/material.dart';
 
-import 'agent/registrationUser.dart';
+import 'user/registrationUser.dart';
 
 
 class CreateAccount extends StatelessWidget {
@@ -51,68 +52,80 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
             const SizedBox(height: 70.0,),
 
             Container(
-              padding: const EdgeInsets.only(left: 25.0, top: 5.0, right: 25.0, bottom: 5.0),
-              height: 50.0,
-              color: Colors.transparent,
-              child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          color: Colors.indigoAccent,
-                          style: BorderStyle.solid,
-                          width: 1.5
-                      ),
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
+              decoration: BoxDecoration(
+                border: Border.all(
+                  style: BorderStyle.solid,
+                  color: Colors.indigo,
+                  width: 1.5
+                ),
+                borderRadius: BorderRadius.circular(20.0)
+              ),
+              child: Column(
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(builder: (BuildContext context) => RegistrationUserPage())
                       );
                     },
-                    child: const Center(
-                      child: Text(
-                        'User Registration',
-                        style: TextStyle(
-                            fontFamily: 'Times New Roman',
-                            fontSize: 18.0,
-                            color: Colors.indigo
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0)
                         ),
+                        backgroundColor: Colors.transparent,
+                        minimumSize: const Size(300.0, 40.0),
+                      elevation: 0,
+                    ),
+                    child: const Text(
+                      'User Account',
+                      style: TextStyle(
+                        fontFamily: 'Times New Roman',
+                        fontSize: 18.0,
+                        color: Colors.indigo,
                       ),
                     ),
-                  )
+                  ),
+                ],
               ),
             ),
 
             const SizedBox(height: 50.0,),
 
             Container(
-              padding: const EdgeInsets.only(left: 25.0, top: 5.0, right: 25.0, bottom: 5.0),
-              height: 50.0,
-              color: Colors.transparent,
-              child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          color: Colors.indigoAccent,
-                          style: BorderStyle.solid,
-                          width: 1.5
-                      ),
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: const Center(
-                      child: Text(
-                        'Agent Registration',
-                        style: TextStyle(
-                            fontFamily: 'Times New Roman',
-                            fontSize: 18.0,
-                            color: Colors.indigo
+              decoration: BoxDecoration(
+                border: Border.all(
+                  style: BorderStyle.solid,
+                  color: Colors.indigo,
+                  width: 1.5,
+                ),
+                borderRadius: BorderRadius.circular(20.0)
+              ),
+              child: Column(
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) => AgentRegistrationPage())
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0)
                         ),
+                        backgroundColor: Colors.transparent,
+                        minimumSize: const Size(300.0, 40.0),
+                      elevation: 0,
+                    ),
+                    child: const Text(
+                      'Agent Account',
+                      style: TextStyle(
+                        fontFamily: 'Times New Roman',
+                        fontSize: 18.0,
+                        color: Colors.indigo,
                       ),
                     ),
-                  )
+                  ),
+                ],
               ),
             ),
 
