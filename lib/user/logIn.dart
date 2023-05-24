@@ -1,4 +1,5 @@
 import 'package:bambe/agent/logInAgent.dart';
+import 'package:bambe/user/userDashBoard.dart';
 import 'package:flutter/material.dart';
 
 
@@ -163,7 +164,11 @@ class _LogInPageState extends State<LogInPage> {
                   child: Column(
                     children: <Widget>[
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) => UserDashBoardPage())
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0)
